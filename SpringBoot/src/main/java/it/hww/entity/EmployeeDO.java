@@ -1,8 +1,8 @@
-package it.hww.service.entity;
+package it.hww.entity;
 
 import java.util.Date;
 
-public class Employee {
+public class EmployeeDO {
     /**
      * 部门名
      */
@@ -24,10 +24,10 @@ public class Employee {
      */
     private Double salary;
 
-    public Employee() {
+    public EmployeeDO() {
     }
 
-    public Employee(String dName, String eId, String eName, Date hiredate, Double salary) {
+    public EmployeeDO(String dName, String eId, String eName, Date hiredate, Double salary) {
         this.dName = dName;
         this.eId = eId;
         this.eName = eName;
