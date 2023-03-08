@@ -80,7 +80,7 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 
-  <select id="selectByAge" resultMap="BaseResultMap">
+  <select id="selectByAge" resultMap="BaseResultMap" flushCache="true" useCache="false">
     select
     <include refid="Base_Column_List">
     </include>

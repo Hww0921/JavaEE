@@ -31,7 +31,14 @@ public class StudentServiceImpl implements StudentService {
         studentDO.setSex(studentRequest.getAge());
         StopWatch stopWatch = new StopWatch();
         stopWatch.start();
+        StudentDO oneStudent = studentMapper.selectByPrimaryKey(1000);
+        if (null == oneStudent){
+            System.out.println("dao层查询数据库，返回为一个对象的时候，可能 null");
+        }
         List<StudentDO> studentDOList = studentMapper.selectByAge(studentDO);
+        if (null == studentDOList){
+            System.out.println("ao层查询数据库，返回为一个集合对象的时候，不可能 null");
+        }
         stopWatch.stop();
         long totalTimeMillis = stopWatch.getTotalTimeMillis();
         System.out.println("query dataBase cost:" + totalTimeMillis);

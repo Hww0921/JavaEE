@@ -1,0 +1,6 @@
+POST http://localhost:8080/Student/getStudentsInfo
+Content-Type: application/json
+
+{
+  "age": "20"
+}

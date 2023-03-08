@@ -16,6 +16,12 @@ public interface StudentMapper {
 
     int insertSelective(StudentDO record);
 
+    /**
+     * 根据ID查询数据
+     *
+     * @param id 主键
+     * @return StudentDO
+     */
     StudentDO selectByPrimaryKey(Integer id);
 
     int updateByPrimaryKeySelective(StudentDO record);
