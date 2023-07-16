@@ -4,3 +4,10 @@ Content-Type: application/json
 {
   "age": "20"
 }
+###
+POST http://localhost:8080/catalogue/getStudentsInfo
+Content-Type: application/json
+
+{
+"age": "20"
+}

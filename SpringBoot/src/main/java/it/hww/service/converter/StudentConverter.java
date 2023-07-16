@@ -1,10 +1,15 @@
 package it.hww.service.converter;
 
 
+import it.hww.controller.dto.CatalogueDTO;
 import it.hww.controller.dto.StudentDTO;
+import it.hww.entity.CatalogueDO;
 import it.hww.entity.StudentDO;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
+
+import java.util.List;
 
 /**
  * @author dkp
@@ -20,4 +25,14 @@ public interface StudentConverter {
      * @return StudentDTO
      */
     StudentDTO do2dto(StudentDO studentDO);
+
+    /**
+     * catalogueDOList--> CatalogueDTOList
+     *
+     * @param catalogueDOList catalogueDOList
+     * @return CatalogueDTOList
+     */
+    List<CatalogueDTO> doToDto(List<CatalogueDO> catalogueDOList);
+
+    CatalogueDTO doToDtoOne(CatalogueDO catalogueDO);
 }
